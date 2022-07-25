@@ -8,7 +8,7 @@ Multi-container Docker app built from the following services:
 
 Useful for quickly setting up a monitoring stack for performance testing. Combine with [serverless-artillery](https://github.com/Nordstrom/serverless-artillery) and [artillery-plugin-influxdb](https://github.com/Nordstrom/artillery-plugin-influxdb) to create a performance testing environment in minutes.
 
-Now with built-in support for influxDB 2.x 
+Now with built-in support for influxDB 2.x
 
 ## Quick Start
 
@@ -33,10 +33,10 @@ docker-compose down
 
 The services in the app run on the following ports:
 
-| Host Port | Service |
-| - | - |
-| 3000 | Grafana |
-| 8086 | InfluxDB |
+| Host Port      | Service    |
+| -------------- | ---------- |
+| 3000           | Grafana    |
+| 8086           | InfluxDB   |
 | 127.0.0.1:8888 | Chronograf |
 
 Note that Chronograf does not support username/password authentication. Anyone who can connect to the service has full admin access. Consequently, the service is not publically exposed and can only be access via the loopback interface on the same machine that runs docker.

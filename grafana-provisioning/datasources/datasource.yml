@@ -8,7 +8,7 @@ datasources:
     secureJsonData:
       password: $V1_AUTH_PASSWORD
     url: http://influxdb:8086
-    isDefault: true
+    isDefault: false
     editable: true
 
   - name: InfluxDB(Flux)
@@ -23,3 +23,4 @@ datasources:
       version: Flux
     secureJsonData:
       token: $DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+    isDefault: true

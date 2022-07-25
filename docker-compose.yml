@@ -1,7 +1,7 @@
 version: '2'
 services:
   influxdb:
-    image: influxdb:latest
+    image: influxdb:2.3.0
     ports:
       - '8086:8086'
     volumes:
@@ -19,7 +19,7 @@ services:
       - V1_AUTH_USERNAME=${V1_AUTH_USERNAME}
       - V1_AUTH_PASSWORD=${V1_AUTH_PASSWORD}
   chronograf:
-    image: chronograf:latest
+    image: chronograf:1.9.4
     ports:
       - '127.0.0.1:8888:8888'
     volumes:
@@ -31,7 +31,7 @@ services:
       - INFLUXDB_USERNAME=${INFLUXDB_USERNAME}
       - INFLUXDB_PASSWORD=${INFLUXDB_PASSWORD}
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:9.0.4
     ports:
       - '3000:3000'
     volumes:
